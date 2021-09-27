@@ -1,0 +1,8 @@
+C:\Users\spk\Desktop\DemoMVC\NewResources\bin\Debug\NewResources.dll
+C:\Users\spk\Desktop\DemoMVC\NewResources\bin\Debug\NewResources.pdb
+C:\Users\spk\Desktop\DemoMVC\NewResources\obj\Debug\NewResources.csproj.AssemblyReference.cache
+C:\Users\spk\Desktop\DemoMVC\NewResources\obj\Debug\NewResources.csproj.GenerateResource.cache
+C:\Users\spk\Desktop\DemoMVC\NewResources\obj\Debug\NewResources.csproj.CoreCompileInputs.cache
+C:\Users\spk\Desktop\DemoMVC\NewResources\obj\Debug\NewResources.dll
+C:\Users\spk\Desktop\DemoMVC\NewResources\obj\Debug\NewResources.pdb
+C:\Users\spk\Desktop\DemoMVC\NewResources\obj\Debug\NewResources.Resources.resources
