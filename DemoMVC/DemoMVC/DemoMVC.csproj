@@ -134,6 +134,23 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CultureHelper.cs" />
+    <Compile Include="Migrations\202109280927074_Initial.cs" />
+    <Compile Include="Migrations\202109280927074_Initial.Designer.cs">
+      <DependentUpon>202109280927074_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109280954509_Rating.cs" />
+    <Compile Include="Migrations\202109280954509_Rating.Designer.cs">
+      <DependentUpon>202109280954509_Rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109281008120_AddingNotation.cs" />
+    <Compile Include="Migrations\202109281008120_AddingNotation.Designer.cs">
+      <DependentUpon>202109281008120_AddingNotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109281044499_ChangingDateFormat.cs" />
+    <Compile Include="Migrations\202109281044499_ChangingDateFormat.Designer.cs">
+      <DependentUpon>202109281044499_ChangingDateFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -203,6 +220,20 @@
       <Project>{3679ee47-978d-46d8-9999-ceafed7ca433}</Project>
       <Name>NewResources</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109280927074_Initial.resx">
+      <DependentUpon>202109280927074_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109280954509_Rating.resx">
+      <DependentUpon>202109280954509_Rating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109281008120_AddingNotation.resx">
+      <DependentUpon>202109281008120_AddingNotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109281044499_ChangingDateFormat.resx">
+      <DependentUpon>202109281044499_ChangingDateFormat.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

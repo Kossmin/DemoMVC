@@ -33,6 +33,7 @@ namespace DemoMVC.Helpers
             "ii-CN", "yo-NG" };
         // Include ONLY cultures you are implementing
         private static readonly List<string> _cultures = new List<string> {
+        "en",
         "vi"
         };
         /// <summary>
