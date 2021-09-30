@@ -123,6 +123,9 @@
   <data name="Title" xml:space="preserve">
     <value>Title</value>
   </data>
+  <data name="TooLong" xml:space="preserve">
+    <value>Too long</value>
+  </data>
   <data name="TooShort" xml:space="preserve">
     <value>Too short</value>
   </data>

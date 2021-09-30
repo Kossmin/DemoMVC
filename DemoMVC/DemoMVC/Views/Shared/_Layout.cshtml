@@ -6,6 +6,16 @@
     <title>@ViewBag.Title - Movies App</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .selected{
+            background-color: gray;
+        }
+
+        .m-3{
+            margin:4px 4px 4px 4px;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,18 +35,49 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
+
         </div>
     </div>
     <div class="container body-content">
+
+        <div class="container m-3">
+            <form name="theForm">
+                <button type="button" class="language" name="en">English</button>
+                <button type="button" class="language" name="vi">Tiếng Việt</button>
+            </form>
+        </div>
+
+
+        
+
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @{ 
+        
+    }
+    <script>
+        $(document).ready(function () {
+            $("button.language").click(function () {
+                $("button.language.selected").removeClass("selected");
+                $(this).addClass("selected");
+                LanguageChange(this.getAttribute("name"));
+            })
+        })
+
+        function LanguageChange(culture) {
+            const url = "~/Movies/SetCulture?culture=" + culture;
+            const form = document.getElementsByName("theForm")[0];
+            form.action = url;
+            form.submit();
+        }
+
+    </script>
 </body>
 </html>

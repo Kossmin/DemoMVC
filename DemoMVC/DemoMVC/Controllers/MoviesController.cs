@@ -6,11 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using DemoMVC.CustomAttribute;
 using DemoMVC.Helpers;
 using DemoMVC.Models;
 
 namespace DemoMVC.Controllers
 {
+    [HandleError]
+    [CustomError]
     public class MoviesController : BaseController
     {
         private MovieDBContext db = new MovieDBContext();
@@ -39,7 +42,6 @@ namespace DemoMVC.Controllers
             {
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
-
             return View(movies);
         }
 

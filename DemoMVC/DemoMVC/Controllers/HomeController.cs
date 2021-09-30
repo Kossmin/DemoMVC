@@ -1,4 +1,5 @@
-﻿using DemoMVC.Helpers;
+﻿using DemoMVC.CustomAttribute;
+using DemoMVC.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,16 @@ namespace DemoMVC.Controllers
 {
     public class HomeController : Controller
     {
+        [CustomError]
         public ActionResult Index()
         {
             return View();
         }
 
+        
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 

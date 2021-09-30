@@ -25,7 +25,7 @@ namespace DemoMVC.Models
         [Display(Name = "Genre", ResourceType = typeof(NewResources.Resources))]
         public string Genre { get; set; }
 
-        [Range(1, 100)]
+        [Range(1, 100 , ErrorMessageResourceType = typeof(NewResources.Resources), ErrorMessageResourceName = "TooLong")]
         [DataType(DataType.Currency)]
         [Display(Name = "Price", ResourceType = typeof(NewResources.Resources))]
         public decimal Price { get; set; }

@@ -97,6 +97,15 @@ namespace NewResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nhập gì mà dài dữ.
+        /// </summary>
+        public static string TooLong {
+            get {
+                return ResourceManager.GetString("TooLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tên gì mà ngắn dữ.
         /// </summary>
         public static string TooShort {
