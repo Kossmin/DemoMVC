@@ -59,7 +59,7 @@ namespace DemoMVC.Controllers
             }
             return View(movie);
         }
-
+        [Route("CreateNewMovie")]
         // GET: Movies/Create
         public ActionResult Create()
         {
@@ -114,6 +114,7 @@ namespace DemoMVC.Controllers
             return View(movie);
         }
 
+        [Route("WannaDelete{id}")]
         // GET: Movies/Delete/5
         public ActionResult Delete(int? id)
         {

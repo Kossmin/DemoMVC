@@ -13,13 +13,10 @@ namespace DemoMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
-            );
-            routes.MapRoute(
-                name: "Custom",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
             );

@@ -4,16 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Movies App</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <style>
-        .selected{
+        .selected {
             background-color: gray;
         }
 
-        .m-3{
-            margin:4px 4px 4px 4px;
+        .m-3 {
+            margin: 4px 4px 4px 4px;
         }
     </style>
 </head>
@@ -41,14 +45,12 @@
     <div class="container body-content">
 
         <div class="container m-3">
-            <form name="theForm">
-                <button type="button" class="language" name="en">English</button>
-                <button type="button" class="language" name="vi">Tiếng Việt</button>
-            </form>
+            <a class="btn language" id="en" href="~/Movies/SetCulture?culture=en">English</a>
+            <a class="btn language" id="vi" href="~/Movies/SetCulture?culture=vi">Tiếng Việt</a>
         </div>
 
 
-        
+
 
         @RenderBody()
         <hr />
@@ -59,25 +61,30 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-    @{ 
-        
+    @{
+        HttpCookie cookie = Request.Cookies["_culture"];
+        var culture = "";
+        if (cookie != null)
+        {
+            culture = cookie.Value;
+        }
+        else
+        {
+            culture = "vi";
+        }
     }
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function () {
-            $("button.language").click(function () {
-                $("button.language.selected").removeClass("selected");
-                $(this).addClass("selected");
-                LanguageChange(this.getAttribute("name"));
-            })
-        })
+            $("a.language.selected").removeClass("selected");
+            let culture = @culture;
+            addSelected(culture.id);
+        });
 
-        function LanguageChange(culture) {
-            const url = "~/Movies/SetCulture?culture=" + culture;
-            const form = document.getElementsByName("theForm")[0];
-            form.action = url;
-            form.submit();
+        function addSelected(culture) {
+            $(`#` + culture).addClass("selected");
         }
-
     </script>
+
 </body>
 </html>
