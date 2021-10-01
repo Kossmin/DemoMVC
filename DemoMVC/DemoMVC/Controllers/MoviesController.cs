@@ -12,7 +12,6 @@ using DemoMVC.Models;
 
 namespace DemoMVC.Controllers
 {
-    [HandleError]
     [CustomError]
     public class MoviesController : BaseController
     {
@@ -42,6 +41,7 @@ namespace DemoMVC.Controllers
             {
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
+            ViewBag.piValue = 3.14;
             return View(movies);
         }
 
@@ -82,7 +82,7 @@ namespace DemoMVC.Controllers
 
             return View(movie);
         }
-
+        
         // GET: Movies/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -167,5 +167,7 @@ namespace DemoMVC.Controllers
             Response.Cookies.Add(cookie);
             return RedirectToAction("Index", "Movies");
         }
+
+
     }
 }

@@ -1,5 +1,27 @@
 ﻿@model IEnumerable<DemoMVC.Models.Movie>
 
+
+
+<h1></h1>
+
+@{ 
+    HttpCookie cookie = Request.Cookies["_culture"];
+    var culture = "";
+    if (cookie != null) {
+        if (cookie.Value == "vi")
+        {
+            culture = "dd/MM/yyyy";
+        }
+        else
+        {
+            culture = "MM/dd/yyyy";
+        }
+    }
+    else
+    {
+        culture = "dd/MM/yyyy";
+    }
+}
 <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
@@ -19,7 +41,7 @@
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                    @Convert.ToDateTime(item.ReleaseDate).ToString(@culture)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Genre)
