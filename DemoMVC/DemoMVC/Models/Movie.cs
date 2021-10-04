@@ -5,6 +5,8 @@ using System.Web;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
 using NewResources;
+using System.Web.Mvc;
+
 namespace DemoMVC.Models
 {
     public class Movie
@@ -12,6 +14,7 @@ namespace DemoMVC.Models
         public int ID { get; set; }
         [StringLength(60, MinimumLength = 5, ErrorMessageResourceType = typeof(NewResources.Resources), ErrorMessageResourceName ="TooShort")]
         [Display(Name = "Title", ResourceType = typeof(NewResources.Resources))]
+        [Remote("IsUID_Available", "Validation")]
         public string Title { get; set; }
 
         [Display(Name = "Date", ResourceType = typeof(NewResources.Resources))]
