@@ -13,7 +13,6 @@ namespace DemoMVC.Controllers
         [CustomError]
         public ActionResult Index()
         {
-            throw new Exception();
             return View();
         }
 
