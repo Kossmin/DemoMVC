@@ -12,7 +12,6 @@ using DemoMVC.Models;
 
 namespace DemoMVC.Controllers
 {
-    [HandleError]
     [CustomError]
     public class MoviesController : BaseController
     {
@@ -59,7 +58,7 @@ namespace DemoMVC.Controllers
             }
             return View(movie);
         }
-
+        [Route("CreateNewMovie")]
         // GET: Movies/Create
         public ActionResult Create()
         {
@@ -82,7 +81,7 @@ namespace DemoMVC.Controllers
 
             return View(movie);
         }
-
+        
         // GET: Movies/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -114,6 +113,7 @@ namespace DemoMVC.Controllers
             return View(movie);
         }
 
+        [Route("WannaDelete{id}")]
         // GET: Movies/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -166,5 +166,7 @@ namespace DemoMVC.Controllers
             Response.Cookies.Add(cookie);
             return RedirectToAction("Index", "Movies");
         }
+
+
     }
 }

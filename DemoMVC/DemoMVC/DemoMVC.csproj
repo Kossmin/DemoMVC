@@ -133,6 +133,7 @@
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\ValidationController.cs" />
     <Compile Include="CustomAttribute\CustomErrorAttribute.cs" />
+    <Compile Include="CustomAttribute\ValidationWithController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,7 +189,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
@@ -201,10 +201,13 @@
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Error\Error.cshtml" />
+    <Content Include="Views\Shared\_MoviesList.cshtml" />
+    <Content Include="Views\Shared\_DataTable.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\ValidationFilter\" />
     <Folder Include="Views\Validation\" />
   </ItemGroup>
   <ItemGroup>

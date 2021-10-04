@@ -17,3 +17,14 @@ D:\DemoMVC\DemoMVC\NewResources\bin\Debug\NewResources.pdb
 D:\DemoMVC\DemoMVC\NewResources\bin\Debug\en\NewResources.resources.dll
 D:\DemoMVC\DemoMVC\NewResources\obj\Debug\NewResources.Resources.en.resources
 D:\DemoMVC\DemoMVC\NewResources\obj\Debug\en\NewResources.resources.dll
+D:\Demo\Demo_MVC\DemoMVC\NewResources\bin\Debug\NewResources.dll
+D:\Demo\Demo_MVC\DemoMVC\NewResources\bin\Debug\NewResources.pdb
+D:\Demo\Demo_MVC\DemoMVC\NewResources\bin\Debug\en\NewResources.resources.dll
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.csprojAssemblyReference.cache
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.Resources.resources
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.Resources.en.resources
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.csproj.GenerateResource.cache
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.csproj.CoreCompileInputs.cache
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\en\NewResources.resources.dll
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.dll
+D:\Demo\Demo_MVC\DemoMVC\NewResources\obj\Debug\NewResources.pdb

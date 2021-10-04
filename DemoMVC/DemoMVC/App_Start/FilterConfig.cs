@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using DemoMVC.CustomAttribute;
+using System.Web;
 using System.Web.Mvc;
 
 namespace DemoMVC
@@ -8,6 +9,7 @@ namespace DemoMVC
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ValidationWithController());
         }
     }
 }
